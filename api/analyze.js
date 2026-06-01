@@ -206,7 +206,7 @@ function extractJSON(text) {
     }
   }
 
-  throw new Error("No valid JSON found in AI response");
+  throw new Error("No valid JSON found. Raw response: " + text.slice(0, 300));;
 }
 
 async function callPricingEngine(prop, checkin, checkout, nights, competitors, signals, dateCtx, seasonalContext, apiKey) {
